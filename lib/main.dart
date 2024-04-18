@@ -79,7 +79,7 @@ class _PaySampleAppState extends State<PaySampleApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('T-shirt Shop'),
+        title: const Text('Shop Apple'),
       ),
       backgroundColor: Colors.white,
       body: ListView(
@@ -141,6 +141,16 @@ class _PaySampleAppState extends State<PaySampleApp> {
                     )
                   : const SizedBox.shrink()),
           // Example pay button configured using a string
+          const SizedBox(height: 15),
+          ElevatedButton(
+            onPressed: () {},
+            style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(
+                  Colors.black,
+                ),
+                foregroundColor: MaterialStateProperty.all<Color>(Colors.white)),
+            child: const Text('Comprar '),
+          ),
           ApplePayButton(
             paymentConfiguration:
                 PaymentConfiguration.fromJsonString(payment_configurations.defaultApplePay),
